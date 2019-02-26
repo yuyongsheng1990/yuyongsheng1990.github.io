@@ -51,7 +51,7 @@ gems: [jekyll-paginate]
 markdown: kramdown
 highlighter: rouge
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+input: GFM                            # use Github Flavored Markdown !important
 
 
 
@@ -67,6 +67,7 @@ gitalk:
   repo: yuyongsheng1990.github.io    #仓库名称
   owner: yuyongsheng1990    #github用户名
   admin: yuyongsheng1990
+  id: 'window.location.pathname'
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
