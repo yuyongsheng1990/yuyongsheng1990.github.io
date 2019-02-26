@@ -5,7 +5,7 @@ header-img: img/post-bg-desk.jpg
 email: yuyongsheng1990@gmail.com
 description: "人，要有思想和何惧，不能人云亦云，也不能亦步亦趋."
 keyword: "yuyongsheng, 机器学习, 知识组织, 语音识别, 于永胜, Wellington's Blog"
-url: "http://yuyongsheng1990.github.io"          # your host, for absolute URL
+url: "https://yuyongsheng1990.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "" # you code repository
 
