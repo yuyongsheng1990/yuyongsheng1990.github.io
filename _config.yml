@@ -1,13 +1,13 @@
 # Site settings
-title: BY Blog
-SEOTitle: 柏荧的博客 | BY Blog
+title: Wellington's Blog
+SEOTitle: 天狼啸月1990的博客 | Wellington Blog
 header-img: img/post-bg-desk.jpg
-email: qiubaiying@gmail.com
-description: "Every failure is leading towards success."
-keyword: "BY, BY Blog, 柏荧的博客, qiubaiying, 邱柏荧, iOS, Apple, iPhone"
-url: "http://qiubaiying.github.io"          # your host, for absolute URL
+email: yuyongsheng1990@gmail.com
+description: "人，要有思想和何惧，不能人云亦云，也不能亦步亦趋."
+keyword: "yuyongsheng, 机器学习, 知识组织, 语音识别, 于永胜, Wellington's Blog"
+url: "http://yuyongsheng1990.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/yuyongsheng1990/yuyongsheng1990.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -19,10 +19,10 @@ sidebar-avatar: /img/about-BY-gentle.jpg      # use absolute URL, seeing it's us
 # SNS settings
 RSS: false
 # weibo_username:     qiubaiying
-zhihu_username:     qiubaiying
-github_username:    qiubaiying
-facebook_username:  baiying.qiu.7
-jianshu_username:   e71990ada2fd
+zhihu_username:     于永胜
+github_username:    yuyongsheng1990
+# facebook_username:  baiying.qiu.7
+# jianshu_username:   e71990ada2fd
 #twitter_username:   qiubaiying
 
 
@@ -62,11 +62,11 @@ kramdown:
 # Gitalk
 gitalk:
   enable: true    #是否开启Gitalk评论
-  clientID: f2c84e7629bb1446c1a4                            #生成的clientID
-  clientSecret: ca6d6139d1e1b8c43f8b2e19492ddcac8b322d0d    #生成的clientSecret
-  repo: qiubaiying.github.io    #仓库名称
-  owner: qiubaiying    #github用户名
-  admin: qiubaiying
+  clientID: c0d49813b1ec6270ff5a                            #生成的clientID
+  clientSecret: 75ecfd4146c38b51464e7b171f2628e089b76133    #生成的clientSecret
+  repo: yuyongsheng1990.github.io    #仓库名称
+  owner: yuyongsheng1990    #github用户名
+  admin: yuyongsheng1990
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
 
 
@@ -99,12 +99,6 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WY",
-        href: "http://zhengwuyang.com"
-    },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
-    },{
         title: "Apple",
         href: "https://apple.com"
     },{
