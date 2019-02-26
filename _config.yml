@@ -7,7 +7,7 @@ description: "人，要有思想和何惧，不能人云亦云，也不能亦步
 keyword: "yuyongsheng, 机器学习, 知识组织, 语音识别, 于永胜, Wellington's Blog"
 url: "http://yuyongsheng1990.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/yuyongsheng1990/yuyongsheng1990.github.io.git" # you code repository
+github_repo: "" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
