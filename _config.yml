@@ -1,10 +1,10 @@
 # Site settings
-title: Wellington Yu's Blog
-SEOTitle: 天狼啸月1990的博客 | Wellington Yu's Blog
+theme: jekyll-theme-minimal
+title: Yongsheng Yu's Homepage
 header-img: img/post-bg-desk.jpg
-email: yuyongsheng1990@gmail.com
+email: yongsheng.yu@hdr.mq.edu.au
 description: "人，要有思想和格局，不能人云亦云，也不能亦步亦趋."
-keyword: "yuyongsheng, 机器学习, 知识组织, 语音识别, 于永胜, Wellington's Blog"
+keyword: "yuyongsheng, Data Mining, Knowledge Graph "
 url: "https://yuyongsheng1990.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "" # you code repository
@@ -12,17 +12,17 @@ github_repo: "" # you code repository
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/yu-github.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /profile.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
 # SNS settings
 RSS: false
-# weibo_username:  
-zhihu_username:     于永胜
+# weibo_username:
+# zhihu_username:     于永胜
 github_username:    yuyongsheng1990
-# facebook_username:  
-# jianshu_username: 
+# facebook_username:
+# jianshu_username:
 twitter_username:   yuyongsheng1990
 
 
