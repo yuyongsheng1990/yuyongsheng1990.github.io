@@ -46,6 +46,13 @@ tags:
     <font color=#0099ff size=5 face="黑体">color=#0099ff size=5 face="黑体"</font>
 <font color=#0099ff size=5 face="黑体">color=#0099ff size=5 face="黑体"</font>
 
+### 高亮
+
+    <mark color=red>高亮文本</mark>  
+    <table><tr><td bgcolor=green>背景色</td></tr></table>
+<mark>高亮文本</mark>
+<table><tr><td bgcolor=green>背景色</td></tr></table>
+
 ### 加粗和斜体
 一对\*号是 --> 斜体  
 一对\*\*好是 --> 加粗  
@@ -56,26 +63,20 @@ tags:
     *斜体*  
     **加粗**
 
-
 ### 列表序号
-
-#### bullet points
-
-    * bullets can be `-`, `+`, or `*`
-    * bullet list 1
-    * bullet list 2   
-      * sub item 1
-      * sub item 2
-* bullets can be `-`, `+`, or `*`
-* bullet list 1
-* bullet list 2   
-    * sub item 1
-    * sub item 2
 
 #### 无序列表
 无序列表只需在行前加+/-/*符号 + 空格即可  
 
-    + 无序列表  
+    + 无序列表
+    * bullet list 1
+    * bullet list 2   
+      * sub item 1
+      * sub item 2
+* bullet list 1
+* bullet list 2   
+    * sub item 1
+    * sub item 2
 
 #### 有序列表
 有序列表则在行前加1.等序号 + 空格即可  

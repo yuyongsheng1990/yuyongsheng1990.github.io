@@ -14,8 +14,12 @@ description: "人，要有思想和格局，不能人云亦云，也不能亦步
             {{ post.subtitle }}
         </h3>
         {% endif %}
-        <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
+		<div class="post-content-preview">
+            {% if post.lang == 'en' %}
+                {{ post.content | strip_html | truncate:300 }}
+            {% else %}
+                {{ post.content | strip_html | truncate:200 }}
+            {% endif %}
         </div>
     </a>
     <p class="post-meta">
