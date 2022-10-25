@@ -89,3 +89,73 @@ Official Accounts: 深度学习与图网络
 
 ### conclusion
 本文实验结果表示，当扰动率很高时，这尤其有效。
+
+## 2022-10-25 NeurIPS 2022 | 基于精确差异学习的图自监督学习
+    论文标题：Graph Self-supervised Learning with Accurate Discrepancy Learning
+    收录会议：NeurIPS 2022
+    论文链接：https://arxiv.org/abs/2202.02989  
+
+**<font color=red>核心: </font>**:
+- **<font color=red>GCL继承GCN和对比学习优势 </font>**;  
+- **<font color=red>D-SLA旨在学习原始图和受干扰图之间的精确差异</font>**;  
+- **<font color=red>图本质上是离散的数据结构</font>**->**<font color=green>因此即使有轻微的扰动，它们的属性也可能会完全不同</font>**
+
+## 内容简介
+- <font color=green>problem: GCN常对度小节点的预测性能较差，在广泛存在的度呈长尾分布的图上表现出结构不公平。</font>  
+- <font color=blue>solution: GCL继承GCN和对比学习优势</font>  
+- 图自监督学习最流行的两种方法：**<font size=4 color=red>预测学习、对比学习</font>**。
+- **预测学习**
+  - <font color=magenta>优点：可以学习相邻节点和边之间的上下文关系。</font>  
+  - <font color=green>缺点：不能学习全局图级的相似性。</font>
+- **对比学习**
+  - <font color=magenta>优点：可以学习全局图级的相似性。</font>  
+  - <font color=green>缺点：其最大化两个不同的受干扰的图之间的相似性的目标时，可能导致表示embedding不同区分具有不同属性的两个相似的图。</font>  
+- proposal: **D-SLA，基于差异的自我监督学习**，旨在学习原始图和受干扰图之间的精确差异。即创建具有不同相似度的给定图的多个扰动，并训练模型来预测每个图是原始图还是扰动图。
+
+## 本文介绍
+图神经网络的**<font color=red>自监督学习(GNNs)</font>**旨在以无监督的方式学习图的精确表示，已获得用于各种下游任务的可转移表示。  
+
+### contributions
+- **新的图自监督学习框架，其目标与对比学习完全相反**，其目的是学习使用区分器(discriminator)区分图和受干扰的图，**<font color=red>因为即使是轻微的扰动也可能导致图的完全不同的属性。</font>**  
+- 为被干扰的图进行图编辑距离而无需任何额外工作，以在表示空间中保持图之间的精确差异量。
+- 化学、生物、社会领域基准
+
+## 模型介绍
+图本质上是离散的数据结构，因此即使有轻微的扰动，他们的属性也可能会完全不同。
+
+![20221026_102830_21](image/20221026_102830_21.png)
+
+<font color=green>比如两个生物分子b和c，尽管他们具有高度相关的结构，但他们的分子作用完全不同。</font>  
+<font color=blue>solution: DSLA，基于差异的自我监督学习:</font>
+- 首先像对比学习一样干扰给定的图形，但不是像对比学习那样最大化干扰图形之间的相似性，而是旨在了解他们之间的差异。
+  - 首先设计一个区分器discriminator，它可以学习区分真实图形和受干扰的图. --> <font color=red>这使得模型能够了解在很大程度上影响全局属性的小差异。</font>  
+  - 其次，还要知道他们之间的确切差异量，因为仅仅知道两个图不同是不够的。  
+
+![20221026_102909_45](image/20221026_102909_45.png)
+
+A. 基于图区分的差异学习(Discrepancy Learning with Graph Discrimination)  
+
+### Model Framework
+![20221026_102753_67](image/20221026_102753_67.png)
+
+1. **original Graph**
+2. **Node Attribute Masking**
+3. **Graph Encoding**
+4. **Graph discriminator**
+5. **Distance-based Learning**
+
+## 图增广
+<font color=red>为获得更集中的增广表示，需要增加社区内边，减少社区间边。</font>  
+我们通过同时扰动原始特征和拓扑生成两个增光G1和G2，并将两增广所得节点表示记为H和O。  
+<font color=magenta>为扩展尾节点邻域以包含更多相同社区的节点。  
+<font color=black>-> 我们将锚尾节点vtail与采样所得相似节点vsample的自我中心网络插值。</font>  
+<font color=magenta>为防止增广过程中注入许多不同社区节点。  
+<font color=black>进一步依据vtail和vsample间的相似性调整插值比率</font>  
+对于头节点，我们则利用相似性采样来提纯其邻域，尽量移除社区间边。
+
+![20221026_103715_77](image/20221026_103715_77.png)
+
+## conclusion
+1. 无监督GCL方法比半监督的GCN方法更具有结构的公平性。
+2. 为获得更集中的增广表示，需要增加社区内边，减少社区间边。
+3. 至于特征增广，我们随机产生掩码向量m来隐去节点特征中的部分维度。
