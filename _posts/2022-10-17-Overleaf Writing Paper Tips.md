@@ -89,11 +89,19 @@ Gadgets & 13
 \end{table}
 ```
 
+## 插入参考文献
+**<font size=3 color=red>overleaf 插入参考文献序号数字化</font>**  
+
+    \bibliographystyle{unsrt}
+
 ## Overleaf 文章模板: format and grammer
 ### main.tex
 main.tex是Overleaf生成的论文主体。
 ```
 \documentclass[a4paper]{article}
+
+%% References citation
+\bibliographystyle{unsrt}
 
 %% Language and font encodings
 \usepackage[english]{babel}
