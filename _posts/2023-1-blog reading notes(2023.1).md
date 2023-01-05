@@ -80,3 +80,16 @@ contributions：
   - 在基准数据集上进行实验，结果证明了该方法的优越性。
 
 ![20230104_163546_72](image/20230104_163546_72.png)
+
+## 2023-1-5 Neural Eigenmap: 基于谱学习的结构化表示学习
+    title: Neural Eigenfunctions Are Structured Representation Learners
+    linkage: https://arxiv.org/pdf/2210.12637.pdf
+    codes: https://github.com/thudzj/NEigenmaps  
+
+  - 可用于自监督学习、图节点表示学习和谱聚类。
+  - Eigenmaps是特征函数(eigenfunctions)的输出。这些方法基于图邻接矩阵(graph adjacency matrix)定义一个核，计算其主特征函数，并以其输出作为节点的表示，完成后续的聚类等任务。也被证明能够维持数据流形上的局部邻域结构的最优表示。
+
+  ![20230105_140715_14](image/20230105_140715_14.png)
+
+  - <font color=green>spectral clustering和Laplacian Eigenmaps是非参的，依赖于求解一个矩阵特征值问题得到eigenmaps，不能拓展到大规模训练数据上，也不能高效地执行样本外泛化。</font>
+  - <font color=blue>用神经网络作为函数逼近器来近似核函数的主特征函数。</font>
