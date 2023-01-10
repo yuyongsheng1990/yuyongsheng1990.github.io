@@ -2,7 +2,7 @@
 layout:     post
 title:      Blog reading notes(2023.1)
 subtitle:
-date:       2023-1-3
+date:       2023-01-03
 author:     Yongsheng Yu
 header-img: img/
 catalog: true
@@ -93,3 +93,40 @@ contributions：
 
   - <font color=green>spectral clustering和Laplacian Eigenmaps是非参的，依赖于求解一个矩阵特征值问题得到eigenmaps，不能拓展到大规模训练数据上，也不能高效地执行样本外泛化。</font>
   - <font color=blue>用神经网络作为函数逼近器来近似核函数的主特征函数。</font>
+
+## 2023-1-10 Graph Transformer近期进展
+
+在graph embedding中，Graph Transformer通过位置编码对图结构信息进行编码，相比GNN<font size=3 color=red>可以捕获长距离依赖，减轻过平滑现象</font>。  
+
+### ICML 2022: Structure-Aware Transformer for Graph Representation learning
+  - <font color=red>本质：改进Transformer位置编码</font>
+  - <font color=green>problem: 使用位置编码的Transformer生成的node embedding不一定捕获它们之间的结构相似性。</font>
+  - <font color=blue>solution: 结构感知Transformer。通过设计新的self-attention mechanism，使其能够捕获到结构信息。</font>新的注意力机制通过在计算注意力得分之前，**<font size=3 color=red>提取每个节点的subgraph表示</font>**，并将结构信息合并到原始的self-attention mechanism中。
+  - 自动生成subgraph的方法：从理论上证明，生成的embedding至少与子图表示具有相同的表达能力。
+    - k-subtree GNN extractor
+    - k-subgraph GNN extractor  
+
+![20230110_164556_66](image/20230110_164556_66.png)
+
+#### structure-Aware Self-attention
+
+![20230110_165132_54](image/20230110_165132_54.png)
+
+<font color=green>Kexp是定义在节点特征上的可训练指数核函数，这就带来了一个问题：当节点特征相似时，结构信息无法被识别并编码。</font>
+<font color=blue>为了同时考虑节点之间的结构相似性，我们考虑了一个更一般化的核函数，额外考虑了每个节点周围的局部子结构。通过引入以每个节点为中心的一组子图，定义**结构感知注意力**如下：</font>
+
+![20230110_170816_90](image/20230110_170816_90.png)
+
+### NIPS 2022: Recipe for a General, Powerful, Scalable Graph Transformer
+
+  - 编码类型：局部编码、全局编码、相对编码。
+  - 模块化框架GraphGPS，支持多种类型的编码
+  - 框架由位置/结构编码、局部消息传递机制、全局注意力机制三部分组成。
+    - 位置/结构编码是影响Graph Transformer性能的最重要因素之一。
+  - <font color=green>problem:现有MPNN+Transformer混合模型往往是MPNN和Transformer层逐层堆叠，由于MPNN固有结构带来的过平滑问题，导致这样的混合模型的也会收到影响。</font>
+  - <font color=blue>solution: 新的混合模型，使MPNN和Transformer计算相互独立，获得更好的性能。</font>
+
+![20230110_171302_91](image/20230110_171302_91.png)
+
+### 总结
+GNN + Transformer混合模型。GNN学习到的图结构信息，然后在Transformer的计算中起到提供结构信息的作用。
