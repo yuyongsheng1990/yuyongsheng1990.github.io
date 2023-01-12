@@ -130,3 +130,43 @@ contributions：
 
 ### 总结
 GNN + Transformer混合模型。GNN学习到的图结构信息，然后在Transformer的计算中起到提供结构信息的作用。
+
+## 2023-1-11 Neural 2022: 大图上线性复杂度的节点级Transformer
+    title: NodeFormer: A Scalable Graph Structure Learning Transformer for Node Classification
+    address: https://openreview.net/pdf?id=sMezXGG5So
+    github: https://github.com/qitianwu/NodeFormer  
+
+  - background: GNN目前已成为对图结构数据建模和embedding表征的主流范式。
+  - <font color=green>challenge: GNN"沿着固定输入图结构进行信息传递"的设计思想暴露了诸多不足。
+    - problem-1: 由于每层聚合只考虑相邻节点间的消息传递，这种有限的感受野(receptive field)设计使得GNN无法有效利用来自其他相邻节点的全局信息
+    - problem-2: 在很多下游任务中，输入数据可能并不包含图结构(比如图片分类任务中，每张图片样本是独立的)，此时GNN对输入图结构的依赖性导致其无法正常工作。</font>
+  - <font color=blue>solution: NodeFormer，新的图表正模型架构，它实现了每层任意两两节点间的信息传递，即在每层的信息聚合中会考虑所有其他节点对当前节点的影响。</font>
+  - <font color=red>NodeFormer设计思想的直观理解就是把GNN定义在了一个两两节点潜在相连且每层的图拓扑可学习的计算图上</font>
+  - <font color=green>这种简单的设计思想带来令人望而却步的计算复杂度(节点数目的平方及复杂度O(N^{2}))</font>    
+  - <font color=blue>一种具有线性复杂度的可变图结构信息传递方法，并首次成功扩展到了百万级规模的节点分类图上，这一方法还能被用于处理没有输入图的问题。</font>  
+
+### 研究背景
+<font color=red>来源于GNN设计思想"沿着固定输入图结构进行信息传递"的问题和局限性</font>  
+<font color=green>GNN在图数据建模任务上的不足：
+  - GNN对于图中"遥远"的节点会过度挤压(over-squashing)，在聚合过程中稀释掉这部分信息
+  - GNN有限的感受野使其难以捕捉长距离依赖(long-range dependence)
+  - GNN聚合邻居信息的设计不能很好地兼容异配关系(heterophily)或连边残缺的图
+  - 在极端的没有输入图的情况下，GNN无法正常工作</font>  
+
+![20230112_122857_54](image/20230112_122857_54.png)
+
+### 大规模图结构学习的技术挑战
+要学习一个全新的图结构，实现两两节点间的信息传递是非常困难的，尤其对于大规模的图。
+<font color=green>主要有以下两点挑战：
+  - 可扩展。O(N^{2})的计算复杂度，对于大规模图的信息传递时非常棘手的。
+  - 可微分。图结构本身是离散的，当考虑对图结构进行优化时一种理想的情况是能实现端到端的梯度更新，此时要求对图结构的学习的可微分的。</font>  
+
+### NodeFormer: 可扩展的节点级Transformer
+<font color=red>NodeFormer就是将Random Feature Map[1]和Gumbel-Softmax[2]两种近似策略有机融合，并提供了理论保障分析，从而实现了线性复杂度O(N)下大规模信息传递图结构的学习。</font>
+
+![20230112_123623_13](image/20230112_123623_13.png)
+
+### Reference
+[1] Ali Rahimi and Benjamin Recht. Random features for large-scale kernel machines. In Advances in Neural Information Processing Systems, pages 1177–1184, 2007.
+
+[2] Eric Jang, Shixiang Gu, and Ben Poole. Categorical reparameterization with gumbel-softmax. In International Conference on Learning Representations, 2017.
