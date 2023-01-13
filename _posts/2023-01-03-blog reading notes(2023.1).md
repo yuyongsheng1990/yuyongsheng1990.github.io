@@ -170,3 +170,29 @@ GNN + Transformer混合模型。GNN学习到的图结构信息，然后在Transf
 [1] Ali Rahimi and Benjamin Recht. Random features for large-scale kernel machines. In Advances in Neural Information Processing Systems, pages 1177–1184, 2007.
 
 [2] Eric Jang, Shixiang Gu, and Ben Poole. Categorical reparameterization with gumbel-softmax. In International Conference on Learning Representations, 2017.
+
+## 2023-1-13 推荐系统中稀疏特征Embedding的优化表示方法
+
+推荐系统CTR任务，即Click Through Rate点击率任务。
+  - background: 海量稀疏特征。海量意味着数量巨大，稀疏意味着即使在很大的训练数据里，大量特征出现频次也非常低。
+  - <font color=red>significance: 如何更好地表征稀疏特征对模型的泛化能力至关重要。</font>
+  - thinking: 除了经典的特征onehot-> 稠密embedding映射模式外，另外的embedding模式并未太受到重视。
+    - 拥有怎样性质的embedding表达方式是较好的？
+    - embedding size作为超参，常规做法是通过手工测试来寻找更好的embedding大小，是否有更好的方式？  
+
+### 用户行为序列中的item embedding
+  - 用户行为是推荐系统中很有价值的可利用信息，可以将用户实施过的行为作为某个用户兴趣的表征。
+  - Res-embedding for Deep Learning based click-through rate prediction modeling
+  - <font color=red>理论证明：神经网络CTR模型的泛化误差与item在embedding空间的分布密度相关。</font>即模型泛化误差越小，模型的泛化能力越好。
+  - <font color=red>结论：在训练过程中约束item embedding</font>
+
+![20230113_110105_12](image/20230113_110105_12.png)
+
+### 非行为序列类推任务中的特征embedding
+
+  - <font color=red>对于高频出现的特征，分配给它较长的embedding大小，使其能够更充分的编码和表达信息。</font> 
+  - <font color=red>对于低频的特征，则分配较短的embedding。因为低频特征在训练数据中出现次数较少，如果分配较长的embedding，容易出现过拟合，影响模型泛化性能。</font>
+  - <font color=red>对于极其低频的特征，基本学不了什么特征，反而会带来各种噪音，那么可以不分配或让它们共享一个公有embedding即可。</font>  
+  - google, Neural Input Search for Large Scale Recommendation Models(NIS)用强化学习来实现这一目标。
+
+![20230113_110607_64](image/20230113_110607_64.png)
