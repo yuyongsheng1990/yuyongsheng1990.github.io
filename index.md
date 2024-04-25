@@ -35,9 +35,9 @@ Before this, I've got an Master of Philosophy degree on information science, sup
 ## <font color=blue>Education Experience</font>
 
 Degree | Major | University | Location | Year
------- | ----- | ---------- | ----
+------ | ----- | ---------- | ---- | ---------
 Doctor of Philosophy | Computer Science | Macquarie University | Sydney, AU | 2024.02 - Now
-Master of Research | Computer Science | Macquarie University | Sydney, Au | 2022.07 - 2023.12
+Master of Research | Computer Science | Macquarie University | Sydney, AU | 2022.07 - 2023.12
 Master of Philosophy | Information Science | Institue of Scientific and Technical Information of China | Beijing, CN | 2015.09 - 2018.01
 
 ## <font color=blue>Work Experience</font>
