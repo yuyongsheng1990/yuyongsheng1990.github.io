@@ -10,8 +10,9 @@ I joined the School of Computing, Macquarie University, as a M.Res student candi
 Before this, I've got an Master of Philosophy degree on information science, supervised by Prof. Hongqi HAN, from Intelligence Theory and Method Center, Institute of Scientific and Technical Information of China(ISTIC) in 2018. <cr>
 
 ## <font color=blue>News</font>
+- Served as a paper reviewer of **WWW 2025**.
 - Served as a paper reviewer of **PAKDD 2024**
-- Paper is accepted by 2023 IEEE International Conference on Big Data(**BigData2023**). (Acceptance rate 17.5% with 92 out of 526)
+- Regular Paper is accepted by 2023 IEEE International Conference on Big Data(**BigData2023**). (Acceptance rate 17.5% with 92 out of 526)
 - Served as a paper reviewer of **IJCNN 2023**.
 - Served as a paper reveiwer of **Neural Networks 2023**.
 
