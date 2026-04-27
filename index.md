@@ -19,7 +19,11 @@ Before this, I've got an Master of Philosophy degree on information science, sup
 
 
 ## <font color=blue>Publications</font>
-[1] **Yongsheng Yu**, Congbo Ma, Zitai Qiu, Shan Xue, Jian Yang, and Jia Wu. 2026. PIGCN: Physics-Inspired Graph Convolution Networks for Heterogeneous Social Event Detection. In Proceedings of the ACM Web Conference 2026 (WWW '26). Association for Computing Machinery, New York, NY, USA, 992–1003. https://doi.org/10.1145/3774904.3792354 (<font color=red>oral paper</font>)
+[1] **Yongsheng Yu**, Congbo Ma, Zitai Qiu, Shan Xue, Jian Yang, and JiaWu. 2026.
+PIGCN: Physics-Inspired Graph Convolution Networks for Heterogeneous
+Social Event Detection. In Proceedings of the ACM Web Conference 2026
+(WWW ’26), April 13–17, 2026, Dubai, United Arab Emirates. ACM, New
+York, NY, USA, 12 pages. https://doi.org/10.1145/3774904.3792354 (<font color=red>oral paper</font>)
 
 [2] **Yongsheng Yu**, Jia Wu, Jian Yang. Social Event Detection with Reinforced Deep Heterogeneous Graph Attention Network[C]. 2023 IEEE International Conference on Big Data (BigData, Acceptance rate 17.5% with 92 out of 526 submissions). IEEE Computer Society, 2023: 463-472. [PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10386153) <cr>
 
