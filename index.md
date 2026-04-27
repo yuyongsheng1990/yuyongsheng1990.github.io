@@ -10,6 +10,7 @@ I joined the School of Computing, Macquarie University, as a M.Res student candi
 Before this, I've got an Master of Philosophy degree on information science, supervised by Prof. Hongqi HAN, from Intelligence Theory and Method Center, Institute of Scientific and Technical Information of China(ISTIC) in 2018. <cr>
 
 ## <font color=blue>News</font>
+- Accepted an oral paper in **WWW 2026** (The Web Conference 2026, Acceptance rate 20.1% with 676 out of 3370, Oral paper)
 - Served as a paper reviewer of **WWW 2025**.
 - Served as a paper reviewer of **PAKDD 2024**
 - Regular Paper is accepted by 2023 IEEE International Conference on Big Data(**BigData2023**). (Acceptance rate 17.5% with 92 out of 526)
@@ -18,13 +19,15 @@ Before this, I've got an Master of Philosophy degree on information science, sup
 
 
 ## <font color=blue>Publications</font>
-[1] **Yongsheng Yu**, Jia Wu, Jian Yang. Social Event Detection with Reinforced Deep Heterogeneous Graph Attention Network[C]. 2023 IEEE International Conference on Big Data (BigData, Acceptance rate 17.5% with 92 out of 526 submissions). IEEE Computer Society, 2023: 463-472. [PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10386153) <cr>
+[1] **Yongsheng Yu**, Congbo Ma, Zitai Qiu, Shan Xue, Jian Yang, and Jia Wu. 2026. PIGCN: Physics-Inspired Graph Convolution Networks for Heterogeneous Social Event Detection. In Proceedings of the ACM Web Conference 2026 (WWW '26). Association for Computing Machinery, New York, NY, USA, 992–1003. https://doi.org/10.1145/3774904.3792354 (<font color=red>oral paper</font>)
 
-[2] Hongqi Han, **Yongsheng Yu**, Lijun Wang, Xiaorui Zhai, Yaxin Ran, Jingpeng Han. Disambiguating USPTO inventor names with semantic fingerprinting and DBSCAN clustering[J]. The Electronic Library, 37(2), pp.225-239, 2019. [PDF](https://doi.org/10.1108/EL-12-2018-0232) <cr>
+[2] **Yongsheng Yu**, Jia Wu, Jian Yang. Social Event Detection with Reinforced Deep Heterogeneous Graph Attention Network[C]. 2023 IEEE International Conference on Big Data (BigData, Acceptance rate 17.5% with 92 out of 526 submissions). IEEE Computer Society, 2023: 463-472. [PDF](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10386153) <cr>
 
-[3] **Yongsheng Yu**, Cheng Dong, Hongqi Han, Zhong Li. The Method of Research Teams Identification Based on Social Network Analysis: Identifying Research Team Leaders Based on Iterative Betweenness Centrality Rank Method[J]. Information Studies: Theory and Application, 41(7): pp.105-110, 2018. [PDF](http://www.itapress.cn/CN/abstract/abstract401.shtml) <cr>
+[3] Hongqi Han, **Yongsheng Yu**, Lijun Wang, Xiaorui Zhai, Yaxin Ran, Jingpeng Han. Disambiguating USPTO inventor names with semantic fingerprinting and DBSCAN clustering[J]. The Electronic Library, 37(2), pp.225-239, 2019. [PDF](https://doi.org/10.1108/EL-12-2018-0232) <cr>
 
-[4] **Yongsheng Yu**, Hongqi Han, Zhong Li. The Method for Discovering Technology Competitor Groups Based on Graph Clustering[C]. Third Annual International Conference on Electronics, Electrical Engineering and Information Science (EEEIS 2017), pp. 484-489,2017. [PDF](https://www.atlantis-press.com/proceedings/eeeis-17/25884622)<cr>
+[4] **Yongsheng Yu**, Cheng Dong, Hongqi Han, Zhong Li. The Method of Research Teams Identification Based on Social Network Analysis: Identifying Research Team Leaders Based on Iterative Betweenness Centrality Rank Method[J]. Information Studies: Theory and Application, 41(7): pp.105-110, 2018. [PDF](http://www.itapress.cn/CN/abstract/abstract401.shtml) <cr>
+
+[5] **Yongsheng Yu**, Hongqi Han, Zhong Li. The Method for Discovering Technology Competitor Groups Based on Graph Clustering[C]. Third Annual International Conference on Electronics, Electrical Engineering and Information Science (EEEIS 2017), pp. 484-489,2017. [PDF](https://www.atlantis-press.com/proceedings/eeeis-17/25884622)<cr>
 
 ## <font color=blue>Professional Activities</font>
   * Journal Reviewer
@@ -49,5 +52,6 @@ Beijing Medicinovo Company | Data Mining Engineer | 2021.09 - 2022.06
 Potevio Information Technology, Co. Ltd | Associate Algorithm Engineer | 2018.06 - 2018.12
 
 ## <font color=blue>Awards</font>
+ * **Macquarie University 2026 Research Rising Star**.
  * **Executive Deans Commendation for Academic Excellence in Year 2 MRes**, 2023, Sydney Australia.
  * **2nd National Scholarship of ISTIC**, 2017, Beijing China.
